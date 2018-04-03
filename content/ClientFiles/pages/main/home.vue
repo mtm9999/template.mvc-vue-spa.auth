@@ -6,7 +6,7 @@
 		</el-row>
 		<el-row>
 			<el-col :span="8">
-				<img src="../../assets/logo.png" />
+				<img src="../../assets/logo.png">
 			</el-col>
 			<el-col :span="16">
 				<p class="msg">{{ msg }}</p>

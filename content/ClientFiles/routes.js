@@ -4,7 +4,7 @@ import Home from './pages/main/home.vue';
 
 const routes = [
 	{
-		path: '/', component: Main, name: 'main',
+		path: '/', component: Main,
 		children: [
 			{ path: '', component: Home, name: 'default', meta: { title: 'Template Home Page' } },
 		]
