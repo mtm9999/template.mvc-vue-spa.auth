@@ -1,0 +1,20 @@
+# build directories
+obj/
+bin/
+wwwroot/
+
+# User-specific files
+*.suo
+*.user
+
+# Resharper files
+_ReSharper.Caches/
+
+# VS Code files
+.vscode/
+
+# Visual Studio Files
+.vs/
+
+# Node files
+node_modules/

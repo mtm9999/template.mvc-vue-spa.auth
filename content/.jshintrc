@@ -1,0 +1,20 @@
+{
+    "esversion": 6,
+    "bitwise": false,
+    "browser": true,
+    "curly": true,
+    "freeze": true,
+    "futurehostile": true,
+    "latedef": "nofunc",
+    "noarg": true,
+    "nocomma": true,
+    "node": true,
+    "nonbsp": true,
+    "nonew": false,
+    "notypeof": true,
+    "shadow": false,
+    "strict": "implied",
+    "undef": true,
+    "unused": "vars",
+    "varstmt": true
+}

@@ -1,0 +1,20 @@
+{
+	"$schema": "http://json.schemastore.org/template",
+	"author": "Jeff Brown",
+	"classifications": [ "Web", "MVC", "Bare" ],
+	"name": "Barebones MVC application using super package",
+	"identity": "jeffb.BareMvcAll",
+	"shortName": "jeffb.mvc1",
+	"tags": {
+		"language": "C#"
+	},
+	"sourceName": "BareMvcAll",
+	"preferNameDirectory": true,
+	"symbols": {
+		"ProjectNameSpace": {
+			"type": "parameter",
+			"defaultValue": "MyProject",
+			"replaces": "jeffb.BareMvcAll"
+		}
+	}
+}

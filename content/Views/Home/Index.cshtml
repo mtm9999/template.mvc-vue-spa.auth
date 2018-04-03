@@ -1,0 +1,10 @@
+﻿@{
+	var version = ViewData["version"];
+}
+
+<div id="app"></div>
+
+@section Scripts {
+	<script>window.app__inject_version = '@version';</script>
+	<script src="/dist/build.js"></script>
+}
