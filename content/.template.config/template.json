@@ -2,7 +2,7 @@
 	"$schema": "http://json.schemastore.org/template",
 	"author": "Jeff Brown",
 	"classifications": [ "Web", "MVC", "SPA", "Vue", "Auth" ],
-	"name": ".NET Core MVC SPA application using Vue with Authentication",
+	"name": ".NET Core MVC SPA using Vue with Auth",
 	"identity": "jeffb.MvcVueSpa.auth",
 	"shortName": "jeffb.mvc2",
 	"tags": {

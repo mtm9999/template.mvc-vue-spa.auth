@@ -16,21 +16,25 @@ The project also implements a simple Authentication and Authorization system sec
 #### Development includes the following features:
 
 * ASP.NET Core support for webpack hot swappable modules
-* Eslint for client code checks
+* Eslint for client code checks (NOTE: If you are having trouble running try `npm -g i eslint-cli`)
 * JsHint config if your editor supports it
 
 
 #### Publish template:
 
-	- publish.bat
-	- nuget push jeffb.template.MvcVueSpa.Auth.<vers>.nupkg -ApiKey <key> -Source https://api.nuget.org/v3/index.json
-
+```
+> package.bat
+> nuget push jeffb.template.MvcVueSpa.Auth.<vers>.nupkg -ApiKey <key> -Source https://api.nuget.org/v3/index.json
+```
 	
 #### Install template: **
 
-	- dotnet new -i jeffb.template.MvcVueSpa.Auth
-
+```
+> dotnet new -i jeffb.template.MvcVueSpa.Auth
+```
 	
 #### Uninstall template: **
 
-	- dotnet new -u jeffb.template.MvcVueSpa.Auth
+```
+> dotnet new -u jeffb.template.MvcVueSpa.Auth
+```
