@@ -1,20 +1,20 @@
 {
 	"$schema": "http://json.schemastore.org/template",
 	"author": "Jeff Brown",
-	"classifications": [ "Web", "MVC", "Bare" ],
-	"name": "Barebones MVC application using super package",
-	"identity": "jeffb.BareMvcAll",
-	"shortName": "jeffb.mvc1",
+	"classifications": [ "Web", "MVC", "SPA", "Vue", "Auth" ],
+	"name": ".NET Core MVC SPA application using Vue with Authentication",
+	"identity": "jeffb.MvcVueSpa.auth",
+	"shortName": "jeffb.mvc2",
 	"tags": {
 		"language": "C#"
 	},
-	"sourceName": "BareMvcAll",
+	"sourceName": "MvcVueSpa.Auth",
 	"preferNameDirectory": true,
 	"symbols": {
 		"ProjectNameSpace": {
 			"type": "parameter",
 			"defaultValue": "MyProject",
-			"replaces": "jeffb.BareMvcAll"
+			"replaces": "jeffb.VueSpaAuth"
 		}
 	}
 }
