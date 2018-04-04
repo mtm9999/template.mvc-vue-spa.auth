@@ -18,12 +18,16 @@
 	</div>
 </template>
 <script>
+import 'vue-awesome/icons/map-marker'; // icon list can be found at: https://fontawesome.com/v4.7.0/icons/
+import 'vue-awesome/icons/motorcycle';
+import Icon from 'vue-awesome/components/Icon';
+
 export default {
 	name: 'SideNav',
 	data() {
 		return {
 			menuCollapse: false,
-			activeIndex: '/site'
+			activeIndex: '/'
 		};
 	},
 	methods: {
@@ -35,6 +39,9 @@ export default {
 	created: function () {
 		//handle page refresh to make sure menu syncs to initial route
 		this.activeIndex = this.$router.currentRoute.path;
+	},
+	components: {
+		Icon
 	}
 };
 </script>

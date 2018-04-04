@@ -9,7 +9,8 @@
         "plugin:vue/strongly-recommended"
     ],
     "parserOptions": {
-        "sourceType": "module"
+		"parser": "babel-eslint",
+		"sourceType": "module"
 	},
 	"globals": {
 		"module": true,

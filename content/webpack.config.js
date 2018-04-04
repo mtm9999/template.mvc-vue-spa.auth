@@ -14,8 +14,8 @@ module.exports = {
 		new copyWebpackPlugin([
 			{ from: './ClientFiles/assets/favicon.ico', to: path.resolve(__dirname, 'wwwroot') }
 		],
-			{ debug: 'warning' }),
-//		new BundleAnalyzerPlugin()
+			{ debug: 'warning' })
+//		,new BundleAnalyzerPlugin()
 	],
 	module: {
 		rules: [

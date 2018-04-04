@@ -4,14 +4,9 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import locale from 'element-ui/lib/locale/lang/en';
 import './assets/site.css';
-import 'vue-awesome/icons'; // icon list can be found at: https://fontawesome.com/v4.7.0/icons/
 
 Vue.use(VueRouter);
 Vue.use(ElementUI, { locale, size: 'small' });
-
-//global components
-import Icon from 'vue-awesome/components/Icon.vue';
-Vue.component('icon', Icon);
 
 //root component
 import App from './App.vue';

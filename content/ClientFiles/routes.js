@@ -1,7 +1,7 @@
 ﻿import Login from './pages/login.vue';
-const Main = () => import(/* webpackChunkName: "default" */ './pages/main.vue');
-const Home = () => import(/* webpackChunkName: "default" */ './pages/main/home.vue');
-const Test = () => import(/* webpackChunkName: "default" */ './pages/main/testPg.vue');
+const Main = () => import(/* webpackChunkName: "app" */ './pages/main.vue');
+const Home = () => import(/* webpackChunkName: "app" */ './pages/main/home.vue');
+const Test = () => import(/* webpackChunkName: "app" */ './pages/main/testPg.vue');
 
 const routes = [
 	{
