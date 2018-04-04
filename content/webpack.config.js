@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const copyWebpackPlugin = require('copy-webpack-plugin'); //copy files & dirs plugin
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
 	entry: { main: './ClientFiles/main.js' },
@@ -13,7 +14,8 @@ module.exports = {
 		new copyWebpackPlugin([
 			{ from: './ClientFiles/assets/favicon.ico', to: path.resolve(__dirname, 'wwwroot') }
 		],
-		{ debug: 'warning' })
+			{ debug: 'warning' }),
+//		new BundleAnalyzerPlugin()
 	],
 	module: {
 		rules: [
@@ -78,9 +80,12 @@ if (process.env.NODE_ENV === 'production') {
 			}
 		}),
 		new webpack.optimize.UglifyJsPlugin({
-			sourceMap: true,
+			sourceMap: false,
 			compress: {
 				warnings: false
+			},
+			output: {
+				comments: false
 			}
 		}),
 		new webpack.LoaderOptionsPlugin({

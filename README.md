@@ -38,3 +38,9 @@ The project also implements a simple Authentication and Authorization system sec
 ```
 > dotnet new -u jeffb.template.MvcVueSpa.Auth
 ```
+
+If there are problems reinstalling, run
+
+```
+> dotnet new --debug:reinit
+```

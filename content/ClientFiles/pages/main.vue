@@ -20,9 +20,7 @@
 			</el-aside>
 			<el-main>
 				<el-row :span="24">
-					<transition name="el-fade-in-linear">
-						<router-view />
-					</transition>
+					<router-view />
 				</el-row>
 			</el-main>
 		</el-container>

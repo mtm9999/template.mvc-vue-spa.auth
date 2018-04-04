@@ -10,6 +10,10 @@
 				<icon name="map-marker" />
 				<span slot="title">Home</span>
 			</el-menu-item>
+			<el-menu-item index="/test">
+				<icon name="motorcycle" />
+				<span slot="title">Test</span>
+			</el-menu-item>
 		</el-menu>
 	</div>
 </template>
