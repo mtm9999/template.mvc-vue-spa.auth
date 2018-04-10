@@ -26,7 +26,8 @@ export default {
 	},
 	methods: {
 		refresh() {
-			this.api.getIt()
+			this.api
+				.getIt()
 				.then(response => {
 					this.msg = response.data;
 				})
@@ -44,7 +45,7 @@ export default {
 </script>
 <style>
 .msg {
-	padding:  30px 20px 150px;
+	padding: 30px 20px 150px;
 	font-size: 300%;
 }
 </style>

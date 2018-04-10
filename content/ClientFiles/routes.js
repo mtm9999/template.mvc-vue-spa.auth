@@ -5,7 +5,8 @@ const Test = () => import(/* webpackChunkName: "app" */ './pages/main/testPg.vue
 
 const routes = [
 	{
-		path: '/', component: Main,
+		path: '/',
+		component: Main,
 		children: [
 			{ path: '', component: Home, name: 'default', meta: { title: 'Template Home Page' } },
 			{ path: 'test', component: Test, name: 'test', meta: { title: 'Template Test Page' } }

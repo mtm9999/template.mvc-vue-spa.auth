@@ -46,12 +46,8 @@ export default {
 				password: ''
 			},
 			validation: {
-				username: [
-					{ required: true, message: 'Please input your Username', trigger: 'blur' }
-				],
-				password: [
-					{ required: true, message: 'Please input your Password', trigger: 'blur' }
-				]
+				username: [{ required: true, message: 'Please input your Username', trigger: 'blur' }],
+				password: [{ required: true, message: 'Please input your Password', trigger: 'blur' }]
 			},
 			loading: false
 		};
@@ -60,16 +56,17 @@ export default {
 		submitForm() {
 			this.errMsg = '';
 			this.loading = true;
-			this.$refs['form'].validate((valid) => {
+			this.$refs['form'].validate(valid => {
 				if (valid) {
-					this.$userSvc.login(this.loginForm.username, this.loginForm.password)
+					this.$userSvc
+						.login(this.loginForm.username, this.loginForm.password)
 						.then(response => {
 							this.loading = false;
 							this.$router.push({ name: 'default' });
 						})
 						.catch(error => {
 							this.loading = false;
-							this.errMsg = (error.data && error.data != '') ? error.data : 'Invalid username or password';
+							this.errMsg = error.data && error.data != '' ? error.data : 'Invalid username or password';
 						});
 				} else {
 					return false;
@@ -84,30 +81,30 @@ export default {
 };
 </script>
 <style scoped>
-	.el-header {
-		background-color: #F8F8F8;
-		border-top: 4px solid #39B392;
-		border-bottom: 1px solid #E3E3E3;
-		padding: 0 20px;
-	}
-	.el-header h1 {
-		display: inline-block;
-		color: #515151;
-		font-size: 140%;
-		font-weight: 600;
-		line-height: 1.1;
-		margin: 0 0 5px;
-		padding: 10px;
-	}
-	.version {
-		font-size: 10px;
-		margin-top: 1.5em;
-	}
-	.well {
-		background-color: #F8F8F8;
-		border: 1px solid #E8E8E8;
-		padding: 2em;
-		margin-top: 2em;
-		color: #515151;
-	}
+.el-header {
+	background-color: #f8f8f8;
+	border-top: 4px solid #39b392;
+	border-bottom: 1px solid #e3e3e3;
+	padding: 0 20px;
+}
+.el-header h1 {
+	display: inline-block;
+	color: #515151;
+	font-size: 140%;
+	font-weight: 600;
+	line-height: 1.1;
+	margin: 0 0 5px;
+	padding: 10px;
+}
+.version {
+	font-size: 10px;
+	margin-top: 1.5em;
+}
+.well {
+	background-color: #f8f8f8;
+	border: 1px solid #e8e8e8;
+	padding: 2em;
+	margin-top: 2em;
+	color: #515151;
+}
 </style>

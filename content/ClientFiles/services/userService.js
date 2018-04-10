@@ -23,16 +23,19 @@ export default class UserService {
 		//create handler for api requests
 		this.authHttp = axios.create();
 		//setup interceptors for api requests
-		this.authHttp.interceptors.response.use(function(response) {
-			return response;
-		}, function(error) {
-			if (error.response.status === 401) {
-				console.log('user creds no longer valid - logout');
-				self.logout();
-			} else {
-				Promise.reject(error);
+		this.authHttp.interceptors.response.use(
+			function(response) {
+				return response;
+			},
+			function(error) {
+				if (error.response.status === 401) {
+					console.log('user creds no longer valid - logout');
+					self.logout();
+				} else {
+					Promise.reject(error);
+				}
 			}
-		});
+		);
 		const usr = this.currUser();
 		if (usr !== null) {
 			//set header for api requests
@@ -41,7 +44,7 @@ export default class UserService {
 		//setup router to check for authorization befdore navigating to next page
 		router.beforeEach((to, from, next) => {
 			console.log('nav to: ' + to.name + '; auth = ' + self.isAuthorized());
-			if ((to.name !== 'login') && !self.isAuthorized()) {
+			if (to.name !== 'login' && !self.isAuthorized()) {
 				console.log('user is not authorized, redirecting');
 				next('/login');
 			} else {
@@ -69,15 +72,18 @@ export default class UserService {
 		};
 		const self = this;
 		const http = axios.create();
-		http.interceptors.response.use(function (response) {
-			//store user data
-			localStorage.setItem(storeKeyUsr, JSON.stringify(response.data));
-			//set header for subsequent api requests
-			self.authHttp.defaults.headers.common['Authorization'] = 'Bearer ' + response.data.token;
-			return response;
-		}, function (error) {
-			return Promise.reject(error);
-		});
+		http.interceptors.response.use(
+			function(response) {
+				//store user data
+				localStorage.setItem(storeKeyUsr, JSON.stringify(response.data));
+				//set header for subsequent api requests
+				self.authHttp.defaults.headers.common['Authorization'] = 'Bearer ' + response.data.token;
+				return response;
+			},
+			function(error) {
+				return Promise.reject(error);
+			}
+		);
 		//make auth request
 		return http.post(urlBase + 'login', data);
 	}
@@ -92,10 +98,9 @@ export default class UserService {
 		if (usr == null) {
 			return;
 		}
-		this.authHttp.get(urlBase + 'curruser')
-			.then(response => {
-				console.log('hard refresh - user still valid');
-			});
+		this.authHttp.get(urlBase + 'curruser').then(response => {
+			console.log('hard refresh - user still valid');
+		});
 	}
 
 	getHttp() {

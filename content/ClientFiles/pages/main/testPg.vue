@@ -21,7 +21,8 @@ export default {
 	},
 	methods: {
 		refresh() {
-			this.api.getIt()
+			this.api
+				.getIt()
 				.then(response => {
 					this.msg = response.data;
 				})
@@ -38,7 +39,7 @@ export default {
 };
 </script>
 <style>
-	.msg {
-		font-size: 200%;
-	}
+.msg {
+	font-size: 200%;
+}
 </style>

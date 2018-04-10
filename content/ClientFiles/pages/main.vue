@@ -29,7 +29,7 @@
 <script>
 import sideNav from './main/sideNav.vue';
 
-export default {	
+export default {
 	name: 'MainPage',
 	data() {
 		return {
@@ -41,9 +41,9 @@ export default {
 	methods: {
 		handleHdrCmd(command) {
 			switch (command) {
-			case 'logout':
-				this.$userSvc.logout();
-				break;
+				case 'logout':
+					this.$userSvc.logout();
+					break;
 			}
 		},
 		sideNavWidth() {
@@ -73,25 +73,25 @@ export default {
 };
 </script>
 <style scoped>
-	.el-header {
-		color: #fff;
-		background-color: #2e3539;
-		padding: 0 20px;
-	}
-	.el-header h1 {
-		display: inline-block;
-		margin: 0 0 5px;
-		padding: 10px;
-	}
-	.username {
-		color: #37B398;
-		font-size: 14px;
-		margin-top: 1.2em;
-	}
-	.el-dropdown-link i {
-		color: #37B398;
-		font-size: 18px;
-		margin-top: 0.9em;
-		margin-left: 20px;
-	}
+.el-header {
+	color: #fff;
+	background-color: #2e3539;
+	padding: 0 20px;
+}
+.el-header h1 {
+	display: inline-block;
+	margin: 0 0 5px;
+	padding: 10px;
+}
+.username {
+	color: #37b398;
+	font-size: 14px;
+	margin-top: 1.2em;
+}
+.el-dropdown-link i {
+	color: #37b398;
+	font-size: 18px;
+	margin-top: 0.9em;
+	margin-left: 20px;
+}
 </style>

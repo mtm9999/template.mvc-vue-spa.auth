@@ -5,12 +5,12 @@
 <script>
 export default {
 	name: 'App',
-	data () {
-		return {
-		};
+	data() {
+		return {};
 	}
 };
 </script>
 
 <style scoped>
+
 </style>

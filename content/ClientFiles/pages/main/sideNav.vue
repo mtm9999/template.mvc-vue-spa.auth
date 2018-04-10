@@ -36,7 +36,7 @@ export default {
 			this.$emit('collapse-menu', this.menuCollapse);
 		}
 	},
-	created: function () {
+	created: function() {
 		//handle page refresh to make sure menu syncs to initial route
 		this.activeIndex = this.$router.currentRoute.path;
 	},
@@ -46,21 +46,21 @@ export default {
 };
 </script>
 <style scoped>
-	#menu-heading {
-		margin-top: 1em;
-	}
-	#menu-heading .el-button {
-		padding: 7px;
-	}
-	.el-menu .fa-icon {
-		margin-right: 5px;
-		width: 24px;
-		text-align: center;
-		font-size: 18px;
-		vertical-align: middle;
-		color: #909399;
-	}
-	.el-menu .el-menu-item.is-active .fa-icon {
-		color: inherit;
-	}
+#menu-heading {
+	margin-top: 1em;
+}
+#menu-heading .el-button {
+	padding: 7px;
+}
+.el-menu .fa-icon {
+	margin-right: 5px;
+	width: 24px;
+	text-align: center;
+	font-size: 18px;
+	vertical-align: middle;
+	color: #909399;
+}
+.el-menu .el-menu-item.is-active .fa-icon {
+	color: inherit;
+}
 </style>
